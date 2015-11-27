@@ -14,7 +14,6 @@ class BlogIndexSpider(Spider):
     def parse(self, response):
         sel = Selector(response)
         articles = sel.xpath('//div[@id="content"]/article')
-        items = []
 
         for article in articles:
             item = BlogItem()
@@ -22,6 +21,4 @@ class BlogIndexSpider(Spider):
             item['link'] = article.xpath('header/h1[@class="entry-title"]/a/@href').extract()
             item['description'] = article.xpath('div[@class="entry-content"]/p[position()<3]/text()').extract()
 
-            items.append(item)
-
-        return items
+            yield item
