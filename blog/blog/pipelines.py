@@ -14,7 +14,7 @@ class BlogPipeline(object):
 
     def process_item(self, item, spider):
         # self.file.write(json.dumps(dict(item), ensure_ascii=False).encode('utf8') + '\n')
-        if(item['description']):
+        if item['description']:
             item['description'] = ''.join(item['description'])
 
         return item
