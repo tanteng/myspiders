@@ -16,7 +16,7 @@ class DayegovPipeline(object):
             item['link'] = self.hotfocus + item['link'][0].encode('utf-8').replace('./','')
 
         if item['description']:
-            item['description'] = item['description'][0].encode('utf-8').replace(' ','')
+            item['description'] = item['description'][0].encode('utf-8')
             item['description'] = re.sub(self.reg,'',item['description'])
 
         return item
