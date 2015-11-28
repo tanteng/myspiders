@@ -14,8 +14,8 @@ class HotSpider(CrawlSpider):
         "http://www.hbdaye.gov.cn/xwzx/bmdt/index.shtml",
     ]
 
-    # for page in range(1,50):
-    #     start_urls.append('http://www.hbdaye.gov.cn/xwzx/bmdt/index_' + str(page) + '.shtml')
+    for page in range(1,50):
+        start_urls.append('http://www.hbdaye.gov.cn/xwzx/bmdt/index_' + str(page) + '.shtml')
 
 
 
