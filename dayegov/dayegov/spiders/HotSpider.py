@@ -35,12 +35,13 @@ class HotSpider(CrawlSpider):
             yield Request(link, meta={'item': item, 'link':link}, callback=self.parse_item)
 
     def parse_item(self, response):
+        item = response.meta['item']
+        soup = BeautifulSoup(response.body, 'lxml')
+
         try:
-            item = response.meta['item']
-            soup = BeautifulSoup(response.body, 'lxml')
             item['content'] = soup.find(id='fontzoom')
             item['content'] = unicode(item['content'])
-            yield item
+            return item
 
         except Exception, e:
             print e,response.meta['link']
