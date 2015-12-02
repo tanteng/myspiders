@@ -39,8 +39,7 @@ class HotSpider(CrawlSpider):
         soup = BeautifulSoup(response.body, 'lxml')
 
         try:
-            item['content'] = soup.find(id='fontzoom')
-            item['content'] = unicode(item['content'])
+            item['content'] = soup.find(id='fontzoom').prettify()
             return item
 
         except Exception, e:
