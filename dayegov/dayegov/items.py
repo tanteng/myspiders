@@ -15,4 +15,5 @@ class DayegovItem(scrapy.Item):
     link = scrapy.Field()
     description = scrapy.Field()
     content = scrapy.Field()
+    pubtime = scrapy.Field()
 

@@ -1,3 +1,4 @@
+# coding=utf-8
 from scrapy.spiders import Spider, CrawlSpider, Rule
 from scrapy.selector import Selector
 from scrapy.linkextractors import LinkExtractor
@@ -28,6 +29,7 @@ class HotSpider(CrawlSpider):
             item['title'] = article.xpath('ul/li[1]/h2/a/text()').extract()
             item['link'] = article.xpath('ul/li[1]/h2/a/@href').extract()
             item['description'] = article.xpath('ul/li[2]/p/text()').extract()
+            item['pubtime'] = article.xpath('ul/li[1]/span/text()').extract()
             link = item['link'][0].encode('utf-8')
             link = link.replace('./', '')
             link = "http://www.hbdaye.gov.cn/xwzx/bmdt/" + link
@@ -40,6 +42,7 @@ class HotSpider(CrawlSpider):
 
         try:
             item['content'] = soup.find(id='fontzoom').prettify()
+            #item['content'] = '内容'
             return item
 
         except Exception, e:
