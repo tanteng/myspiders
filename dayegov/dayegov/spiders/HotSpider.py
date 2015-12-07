@@ -42,7 +42,6 @@ class HotSpider(CrawlSpider):
 
         try:
             item['content'] = soup.find(id='fontzoom').prettify()
-            #item['content'] = '内容'
             return item
 
         except Exception, e:
