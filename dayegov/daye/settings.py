@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Scrapy settings for dayegov project
+# Scrapy settings for daye project
 #
 # For simplicity, this file contains only settings considered important or
 # commonly used. You can find more settings consulting the documentation:
@@ -9,14 +9,14 @@
 #     http://scrapy.readthedocs.org/en/latest/topics/downloader-middleware.html
 #     http://scrapy.readthedocs.org/en/latest/topics/spider-middleware.html
 
-BOT_NAME = 'dayegov'
+BOT_NAME = 'daye'
 
-SPIDER_MODULES = ['dayegov.spiders']
-NEWSPIDER_MODULE = 'dayegov.spiders'
+SPIDER_MODULES = ['daye.spiders']
+NEWSPIDER_MODULE = 'daye.spiders'
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-#USER_AGENT = 'dayegov (+http://www.yourdomain.com)'
+#USER_AGENT = 'daye (+http://www.yourdomain.com)'
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 #CONCURRENT_REQUESTS=32
@@ -44,13 +44,13 @@ NEWSPIDER_MODULE = 'dayegov.spiders'
 # Enable or disable spider middlewares
 # See http://scrapy.readthedocs.org/en/latest/topics/spider-middleware.html
 #SPIDER_MIDDLEWARES = {
-#    'dayegov.middlewares.MyCustomSpiderMiddleware': 543,
+#    'daye.middlewares.MyCustomSpiderMiddleware': 543,
 #}
 
 # Enable or disable downloader middlewares
 # See http://scrapy.readthedocs.org/en/latest/topics/downloader-middleware.html
 #DOWNLOADER_MIDDLEWARES = {
-#    'dayegov.middlewares.MyCustomDownloaderMiddleware': 543,
+#    'daye.middlewares.MyCustomDownloaderMiddleware': 543,
 #}
 
 # Enable or disable extensions
@@ -62,7 +62,7 @@ NEWSPIDER_MODULE = 'dayegov.spiders'
 # Configure item pipelines
 # See http://scrapy.readthedocs.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
-   'dayegov.pipelines.DayegovPipeline': 300,
+   'daye.pipelines.DayegovPipeline': 300,
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)

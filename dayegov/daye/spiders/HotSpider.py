@@ -5,7 +5,7 @@ from scrapy.linkextractors import LinkExtractor
 from scrapy import Request
 from scrapy import log
 from bs4 import BeautifulSoup
-from dayegov.items import DayegovItem
+from daye.items import DayegovItem
 import sys
 
 
